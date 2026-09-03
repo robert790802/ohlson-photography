@@ -79,3 +79,10 @@
 /blog-wedding-day-timeline.html                            /blog-wedding-timeline-prep-tips.html 301
 /blog-what-to-wear-engagement-photos.html                  /blog-what-to-wear-to-engagement-photos.html 301
 /blog-what-to-wear-family-portraits.html                   /blog-what-to-wear-for-family-portraits.html 301
+
+# --- journal-* URLs from the old site (no .html, no "blog-" prefix) still ranking/clicked, 404'ing on the new site ---
+/journal-eight-tips-engagement-session                     /blog-8-tips-to-prepare-for-your-engagement-photography-session.html 301
+/journal-rachel-and-josh-hammock-beach                     /blog-rachel-josh-wedding-at-hammock-beach.html 301
+/journal-daytona-beach-wedding-venues                      /blog-our-favorite-daytona-beach-venues.html 301
+/journal-family-photo-spots-palm-coast                     /blog-best-places-for-family-photos-palm-coast-flagler-beach.html 301
+/journal-boho-bridal-editorial-medellin-colombia           /blog-boho-bridal-editorial-medellin-colombia.html 301
