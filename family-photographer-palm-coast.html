@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family Photographer in Palm Coast & Flagler Beach | Ohlson Photography</title>
+<meta name="description" content="Guided family sessions on Flagler Beach, Princess Place, Washington Oaks or at home. Bilingual, relaxed, built around kids, teens and grandparents.">
+<link rel="preload" as="image" href="images/family/BeachFamilySession_OhlsonPhotography-17.webp" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#F7F2EA; --cream2:#EFE7D9; --paper:#FBF8F2;
+    --ink:#2b2723; --ink-soft:#6d6459;
+    --sage:#8f9d90; --sage-deep:#5c6a5f; --sage-tint:#e7ece6;
+    --gold:#b39257; --gold-soft:#d8c39a;
+    --dark:#2a332d; --line:#e6ddce;
+    /* legacy aliases so existing rules still resolve */
+    --teal:#5c6a5f; --teal-deep:#2a332d; --ivory2:#EFE7D9; --gold2:#b39257;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{overflow-x:hidden;max-width:100%}
+  body{background:var(--ivory);color:var(--ink);font-family:'Jost',sans-serif;font-weight:300;line-height:1.75;letter-spacing:.01em}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:500}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 30px}
+  .eyebrow{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--sage-deep);font-weight:500}
+  .center{text-align:center}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:50;background:rgba(250,246,239,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:12px 30px;max-width:1120px;margin:0 auto}
+  .logo{font-family:'Cormorant Garamond',serif;color:var(--ink);text-align:center;line-height:1}
+  .logo .mark{font-size:30px;font-style:italic;font-weight:500;letter-spacing:.02em}
+  .logo .sub{display:block;font-family:'Jost',sans-serif;font-weight:400;font-size:9px;letter-spacing:.42em;margin-top:2px;color:var(--ink-soft)}
+  .nav-links{display:flex;gap:17px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;align-items:center}
+  .nav-links a{color:var(--ink-soft);text-decoration:none;transition:color .2s}
+  .nav-links a:hover{color:var(--sage-deep)}
+  .nav-links a.cta{border:1px solid var(--ink);color:var(--ink);padding:10px 20px;border-radius:2px}
+  .nav-links a.cta:hover{background:var(--ink);color:var(--ivory)}
+  @media(max-width:820px){.nav-links a:not(.cta){display:none}}
+
+  /* photo placeholder */
+  .ph{position:relative;overflow:hidden;background:linear-gradient(135deg,#ccb096,#a98f63 55%,#6f5c40);display:flex;align-items:flex-end;color:rgba(255,255,255,.9)}
+  .ph .tag{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:14px 16px;width:100%;background:linear-gradient(transparent,rgba(20,40,38,.6));line-height:1.4}
+  .g-hero{background:linear-gradient(140deg,#d8c4a2,#b1946a 45%,#5c4e3c)}
+  .g-warm{background:linear-gradient(135deg,#e0cad,#bd9d6e 55%,#7a6446)}
+  .g-green{background:linear-gradient(150deg,#b7bd95,#7f8a5f 55%,#495138)}
+  .g-teal{background:linear-gradient(150deg,#aeb9ac,#7f8d80 55%,#4b564d)}
+  .g-dusk{background:linear-gradient(160deg,#e6b98f,#b0736a 50%,#5a3f4e)}
+
+  /* hero */
+  header.hero{padding:0}
+  .hero-inner{text-align:center;max-width:880px;margin:0 auto;padding:44px 0 24px}
+  .hero h1{font-size:clamp(28px,3.6vw,44px);line-height:1.1;font-weight:500;margin:10px auto 0}
+  .hero h1 em{font-style:italic;color:var(--sage-deep)}
+  .hero .lead{max-width:540px;margin:14px auto 0;font-size:17px;line-height:1.62;color:var(--ink-soft)}
+  .btn{display:inline-block;padding:13px 34px;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:.25s;cursor:pointer}
+  .btn-solid{background:var(--ink);color:var(--ivory);border:1px solid var(--ink)}
+  .btn-solid:hover{background:var(--dark);border-color:var(--dark)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1px solid #cbfac}
+  .btn-ghost{border:1px solid #cbbfac}
+  .btn-ghost:hover{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+  .hero-cta{margin-top:18px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .hero-photo{margin-top:56px;height:560px}
+  .hero-photo .ph{height:100%}
+  @media(max-width:720px){.hero-photo{height:420px}}
+
+  /* trust bar */
+  .trust{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0}
+  .trust .wrap{display:flex;justify-content:center;gap:22px 64px;flex-wrap:wrap;text-align:center}
+  .trust .stat{font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+  .trust .stat b{display:block;font-family:'Cormorant Garamond',serif;font-size:31px;font-weight:500;color:var(--ink);letter-spacing:.01em;text-transform:none;margin-bottom:3px}
+  .trust .stars{color:var(--gold);letter-spacing:2px}
+
+  section{padding:92px 0}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  @media(max-width:840px){.split{grid-template-columns:1fr;gap:36px}}
+  .split.rev .txt{order:2}
+  .split .ph{height:520px;border-radius:3px}
+  h2.big{font-size:clamp(30px,4.2vw,44px);line-height:1.18;margin:14px 0 22px}
+  .txt p{color:var(--ink-soft);margin-bottom:16px}
+  .quote-mark{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--sage-deep);line-height:1.55;margin:18px 0;padding-left:16px;border-left:2px solid var(--gold-soft)}
+
+  /* promise band */
+  
+  .promise .wrap{max-width:820px;text-align:center}
+  .promise .big{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(24px,3.6vw,34px);line-height:1.5;color:var(--ink)}
+  .promise .who{margin-top:20px;font-size:12.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--sage-deep)}
+
+  /* three pillars */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:20px}
+  @media(max-width:820px){.pillars{grid-template-columns:1fr;gap:24px}}
+  .pillar{text-align:center;padding:0 6px}
+  .pillar .k{font-family:'Cormorant Garamond',serif;font-size:28px;font-style:italic;color:var(--ink)}
+  .pillar .k::after{content:'';display:block;width:34px;height:1px;background:var(--gold);margin:12px auto 0}
+  .pillar p{color:var(--ink-soft);font-size:16px;margin-top:8px}
+
+  /* polaroid feature */
+  .polaroid{background:var(--cream2)}
+  .polaroid .ph{height:500px}
+
+  /* gallery strip */
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
+  .strip .ph{height:230px}
+  .strip .ph:nth-child(1){grid-row:span 2;height:472px}
+  @media(max-width:820px){.strip{grid-template-columns:repeat(2,1fr)}.strip .ph:nth-child(1){grid-row:span 1;height:230px}}
+
+  /* collections teaser */
+  .collections .center{max-width:640px;margin:0 auto 12px}
+  .floor{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--ink-soft);text-align:center;margin-top:8px}
+
+  /* final cta */
+  .final{background:var(--sage-tint);color:var(--ink);text-align:center}
+  .final h2{color:var(--ink);font-size:clamp(30px,4.5vw,46px)}
+  .final p{color:var(--ink-soft);max-width:520px;margin:14px auto 0}
+  .final .eyebrow{color:var(--gold)}
+
+  footer{background:var(--cream2);color:var(--ink-soft);padding:40px 0;text-align:center;font-size:14px;letter-spacing:.04em;border-top:1px solid var(--line)}
+  footer .logo{color:var(--ink);margin-bottom:10px}
+  footer a{color:var(--gold);text-decoration:none}
+
+  .note{background:#fff8e7;border:1px solid #e0c46c;color:#6b5622;font-size:12.5px;padding:9px 14px;border-radius:3px;max-width:1120px;margin:0 auto;font-style:italic}
+
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:224px;gap:12px;margin-top:40px}
+  .gallery img{width:100%!important;height:100%!important;object-fit:cover;border-radius:2px;display:block}
+  .gallery img:first-child{grid-row:span 2}
+  @media(max-width:820px){.gallery{grid-template-columns:repeat(2,1fr)}}
+  .hero-full{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;aspect-ratio:1.85/1;max-height:88vh;margin-top:0;background:var(--ivory)}
+  .hero-full img{width:100%;height:100%;object-fit:cover;object-position:center 68%;display:block}
+  @media(max-width:720px){.hero-full{height:48vh;min-height:360px}}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+  .gallery img.reveal{transition:opacity .8s ease,transform .8s ease}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important}}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ7B1RDH1Q"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MJ7B1RDH1Q');</script>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://ohlsonphotography.com/family-photographer-palm-coast.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ohlson Photography">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Family Photographer in Palm Coast &amp; Flagler Beach | Ohlson Photography">
+<meta property="og:description" content="Guided family sessions on Flagler Beach, Princess Place, Washington Oaks or at home. Bilingual, relaxed, built around kids, teens and grandparents.">
+<meta property="og:url" content="https://ohlsonphotography.com/family-photographer-palm-coast.html">
+<meta property="og:image" content="https://ohlsonphotography.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ohlsonphotography.com/og-image.jpg">
+<style>.foot-nav{max-width:1060px;margin:2px auto 22px;text-align:center}.foot-eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:17px}.foot-links{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:9px 0;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:500}.foot-links a{color:var(--ink)!important;text-decoration:none;padding:0 15px;position:relative;transition:color .2s}.foot-links a:hover{color:var(--gold)!important}.foot-links a:not(:last-child)::after{content:'\00B7';position:absolute;right:-2px;color:var(--gold);font-weight:400}.foot-rule{width:40px;height:1px;background:var(--gold-soft);margin:15px auto}.foot-credit{margin-top:18px;font-size:11px;letter-spacing:.08em;color:var(--ink-soft)}.foot-credit .ib{color:#c7ab77}.foot-credit a{color:#c7ab77!important;text-decoration:none;transition:color .2s}.foot-credit a:hover{color:var(--gold)!important}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "@id": "https://ohlsonphotography.com/#business", "name": "Ohlson Photography", "description": "Wedding, branding, headshot, product and commercial photographer serving Palm Coast, St. Augustine, Ponte Vedra, Jacksonville and Northeast Florida. Bilingual in English and Spanish with more than 15 years of professional experience.", "image": "https://ohlsonphotography.com/og-image.jpg", "logo": "https://ohlsonphotography.com/apple-touch-icon.png", "url": "https://ohlsonphotography.com/", "telephone": "+1-386-302-2186", "email": "info@ohlsonphotography.com", "priceRange": "$$$", "address": {"@type": "PostalAddress", "addressLocality": "Palm Coast", "addressRegion": "FL", "addressCountry": "US"}, "geo": {"@type": "GeoCoordinates", "latitude": 29.5844, "longitude": -81.2078}, "areaServed": ["Palm Coast", "Flagler Beach", "Bunnell", "St. Augustine", "St. Johns", "Ponte Vedra", "Jacksonville", "Jacksonville Beach", "Daytona Beach", "Ormond Beach", "Northeast Florida"], "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Personal Branding Photography"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Professional Headshots"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Corporate and Team Headshots"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Product and Commercial Photography"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Editorial and Concept Photography"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Architectural Photography"}}], "founder": {"@type": "Person", "name": "Paola Ohlson"}, "knowsLanguage": ["en", "es"], "sameAs": ["https://www.instagram.com/ohlsonphoto", "https://www.facebook.com/ohlsonphoto", "https://www.pinterest.com/ohlsonphoto", "https://www.theknot.com/marketplace/ohlson-photography-flagler-beach-fl-2038334", "https://www.weddingwire.com/biz/ohlson-photography/47c1bc06467b9632.html"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ohlsonphotography.com/"}, {"@type": "ListItem", "position": 2, "name": "Family Photography", "item": "https://ohlsonphotography.com/family-photographer-palm-coast.html"}]}</script>
+<style>
+  .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:0;cursor:pointer;padding:8px;margin-left:16px}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--ink);transition:.3s}
+  .mobile-menu{position:fixed;inset:0;background:var(--ivory);z-index:100;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:2px;padding:64px 30px 36px;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;visibility:hidden}
+  .mobile-menu.open{transform:none;visibility:visible}
+  .mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:25px;color:var(--ink);text-decoration:none;padding:4px 0;line-height:1.25}
+  .mobile-menu a:first-of-type{margin-top:auto}
+  .mobile-menu a:last-of-type{margin-bottom:auto}
+  .mobile-menu a.m-cta{margin-top:20px;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;border:1px solid var(--ink);padding:14px 32px;border-radius:2px}
+  .mobile-menu .m-close{position:absolute;top:18px;right:24px;font-size:34px;line-height:1;background:none;border:0;color:var(--ink);cursor:pointer}
+  @media(max-width:820px){.hamburger{display:flex}.nav-links a.cta{display:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="logo"><img src="images/img-1bb6cec512.webp" alt="Ohlson Photography" style="height:56px;width:auto;display:block" loading="eager" decoding="async"></a>
+    <div class="nav-links">
+      <a href="weddings.html">Weddings</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="proposals.html">Proposals</a>
+      <a href="portraits.html">Portraits</a>
+      <a href="branding.html">Branding</a>
+      <a href="about.html">About</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="cta">Check Your Date</a>
+      <button class="hamburger" aria-label="Open menu" onclick="document.getElementById('mnav').classList.add('open')"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mnav"><button class="m-close" aria-label="Close" onclick="document.getElementById('mnav').classList.remove('open')">&times;</button><a href="weddings.html">Weddings</a><a href="gallery.html">Gallery</a><a href="proposals.html">Proposals</a><a href="vow-renewal-photographer.html">Vow Renewals</a><a href="portraits.html">Portraits</a><a href="wall-art-prints.html">Prints &amp; Wall Art</a><a href="professional-headshots-palm-coast.html">Headshots</a><a href="branding.html">Branding</a><a href="about.html">About</a><a href="reviews.html">Reviews</a><a href="blog.html">Blog</a><a href="bodas.html">Espa&ntilde;ol</a><a href="contact.html" class="m-cta">Check Your Date</a></div>
+
+
+<style>
+  .wed-hero{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;aspect-ratio:1.85/1;max-height:82vh;margin-top:0;background:var(--ivory)}
+  @media(max-width:720px){.wed-hero{aspect-ratio:1.05/1}}
+  .wed-hero img{width:100%;height:100%;object-fit:cover;object-position:center 62%;display:block}
+  .incl{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 40px;margin-top:38px;text-align:left}
+  @media(max-width:820px){.incl{grid-template-columns:1fr}}
+  .incl .it{border-top:1px solid var(--line);padding-top:16px}
+  .incl .it b{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;font-weight:500;color:var(--ink);display:block;margin-bottom:5px}
+  .incl .it span{font-size:14.5px;color:var(--ink-soft);line-height:1.6}
+  .collections{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:44px;text-align:left;align-items:stretch;max-width:820px;margin-left:auto;margin-right:auto}
+  @media(max-width:820px){.collections{grid-template-columns:1fr;max-width:420px}}
+  .col-card{border:1px solid var(--line);border-radius:5px;padding:34px 30px;background:var(--paper);display:flex;flex-direction:column}
+  .col-name{font-family:'Cormorant Garamond',serif;font-size:27px;font-style:italic;color:var(--ink)}
+  .col-hours{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-deep);margin-top:5px}
+  .col-price{font-family:'Cormorant Garamond',serif;font-size:42px;color:var(--ink);margin:20px 0 2px;line-height:1}
+  .col-price small{font-size:12px;color:var(--ink-soft);font-family:'Jost',sans-serif;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:6px}
+  .col-list{list-style:none;margin:20px 0 26px;padding:0}
+  .col-list li{font-size:14px;color:var(--ink-soft);padding:9px 0 9px 22px;position:relative;border-top:1px solid var(--line);line-height:1.5}
+  .col-list li:before{content:'';position:absolute;left:0;top:15px;width:6px;height:6px;border:1px solid var(--gold);border-radius:50%}
+  .col-card .btn{margin-top:auto;text-align:center}
+  .faq{max-width:1040px;margin:34px auto 0;text-align:left;display:grid;grid-template-columns:1fr 1fr;column-gap:56px;border-bottom:1px solid var(--line)}
+  @media(max-width:820px){.faq{grid-template-columns:1fr}}
+  .faq .q{border-top:1px solid var(--line);padding:24px 0}
+  .faq .q h4{font-family:'Cormorant Garamond',serif;font-size:23px;font-style:italic;color:var(--ink);font-weight:500;margin-bottom:8px}
+  .faq .q p{color:var(--ink-soft);font-size:15px;line-height:1.7}
+  .pair-land{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;margin-top:8px}
+  @media(max-width:820px){.pair-land{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}}
+  .pair-land img{width:100%;height:auto;border-radius:3px;display:block;box-shadow:0 16px 40px rgba(30,25,20,.13)}
+  .detail-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px}
+  @media(max-width:820px){.detail-strip{grid-template-columns:1fr;max-width:460px;margin-left:auto;margin-right:auto}}
+  .detail-strip figure{margin:0}
+  .detail-strip img{width:100%;height:340px;object-fit:cover;border-radius:2px;display:block}
+  .detail-strip figcaption{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--ink);margin-top:12px}
+  .detail-strip figcaption span{display:block;font-family:'Jost',sans-serif;font-style:normal;font-size:14px;color:var(--ink-soft);line-height:1.6;margin-top:4px}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:30px;text-align:left}
+  @media(max-width:820px){.steps{grid-template-columns:1fr;gap:26px;max-width:460px;margin-left:auto;margin-right:auto}}
+  .step .n{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:36px;color:var(--gold);line-height:1}
+  .step .n::after{content:'';display:block;width:26px;height:1px;background:var(--gold-soft);margin-top:12px}
+  .step b{display:block;font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--ink);margin:14px 0 6px;font-style:normal;font-weight:500}
+  .step p{font-size:14.5px;color:var(--ink-soft);line-height:1.62}
+  .light-band{display:grid;grid-template-columns:0.85fr 1fr;gap:56px;align-items:center}
+  @media(max-width:820px){.light-band{grid-template-columns:1fr;gap:30px}}
+  .light-band img{width:100%;max-height:560px;object-fit:cover;object-position:center;border-radius:3px;display:block;box-shadow:0 20px 50px rgba(30,25,20,.22)}
+  .incl.incl-ph .it{border-top:0;padding-top:0}
+  .incl.incl-ph .it img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px;display:block;margin-bottom:16px;box-shadow:0 14px 34px rgba(30,25,20,.12)}
+  .incl.incl-ph .it b{border-top:1px solid var(--line);padding-top:14px}
+  .close-photo{width:100%;max-width:440px;aspect-ratio:3/2;object-fit:cover;border-radius:3px;display:block;margin:0 auto 28px;box-shadow:0 18px 45px rgba(30,25,20,.16)}
+  .rev-trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px 44px;margin-top:30px;align-items:center}
+  @media(max-width:820px){.rev-trio{grid-template-columns:1fr;max-width:460px;margin-left:auto;margin-right:auto}}
+  .rev-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:52% 40%;border-radius:3px;display:block;box-shadow:0 16px 40px rgba(30,25,20,.14)}
+  .quote-flank{display:grid;grid-template-columns:136px 1fr 136px;gap:38px;align-items:center;max-width:860px;margin:30px auto 0}
+  .quote-flank img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 30%;border-radius:3px;display:block;box-shadow:0 14px 34px rgba(30,25,20,.14)}
+  .quote-flank .quote-mark{font-size:clamp(17px,1.7vw,19px)}
+  @media(max-width:720px){.quote-flank{grid-template-columns:110px 110px;justify-content:center;gap:14px}.quote-flank .qf-text{grid-column:1/-1;order:3;margin-top:8px}}
+  .tbd{background:#fff4c2;outline:1px dashed #c9a14a;padding:0 4px}
+</style>
+<!-- HERO -->
+<header class="hero" style="padding:0">
+<div class="wed-hero"><img src="images/family/BeachFamilySession_OhlsonPhotography-17.webp" alt="Parents laughing as they walk hand in hand with their two little boys along the beach" loading="eager" fetchpriority="high" decoding="async"><span style="position:absolute;right:16px;bottom:13px;z-index:2;color:#fff;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;letter-spacing:.02em;text-shadow:0 1px 6px rgba(0,0,0,.45)">A summer morning at the beach</span></div>
+<div class="wrap hero-inner">
+  <div class="eyebrow">Palm Coast &middot; Flagler Beach &middot; St. Augustine</div>
+  <h1 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,4vw,46px);line-height:1.12;margin:10px 0 0">Family photographs of the moment the <em>love</em> shows.</h1>
+  <p class="lead" style="max-width:600px;margin:18px auto 0;font-size:17px;line-height:1.62;color:var(--ink-soft)">Family sessions on the beaches, gardens and porches of Florida's Historic Coast, or right at home. Grandparents, grandkids, cousins visiting for the summer, the newest baby. I guide every minute, so all you have to do is show up together.</p>
+</div>
+</header>
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="wrap">
+    <div class="stat"><b>5.0</b><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> &middot; 54 Google reviews</div>
+    <div class="stat"><b>15+</b> years behind the camera</div>
+    <div class="stat"><b>6&ndash;7</b> years, same families</div>
+    <div class="stat"><b>Bilingual</b> English &amp; Espa&ntilde;ol</div>
+  </div>
+</div>
+<!-- PROMISE -->
+<section style="padding:48px 0;background:var(--cream2)">
+  <div class="wrap" style="max-width:820px;text-align:center">
+    <div class="eyebrow">Why Families</div>
+    <p class="big" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;line-height:1.5;color:var(--ink);margin-top:8px">&ldquo;We know time flies, but it really shows in pictures just one year after. These memories are so important to have.&rdquo;</p>
+    <div class="who" style="color:var(--sage-deep);letter-spacing:.24em;text-transform:uppercase;font-size:12.5px;margin-top:14px">Paola Ohlson</div>
+  </div>
+</section>
+<!-- THE REAL MOMENTS -->
+<section style="padding:44px 0">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:28px">
+      <div class="eyebrow">The Real Moments</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-style:normal;font-size:clamp(18px,2.1vw,24px);line-height:1.3;margin-top:10px;color:var(--ink)">The hug for grandma. The laugh you didn't see coming.</h2>
+    </div>
+    <div class="pair-land">
+      <img src="images/family/FamilySession_OhlsonPhotography-8.webp" alt="A grandmother hugging her two laughing grandchildren on the beach at golden hour" loading="lazy" decoding="async">
+      <img src="images/family/BeachFamilySession_OhlsonPhoto_-22.webp" alt="A mother cradling her baby while the father wraps them both in a hug by the water" loading="lazy" decoding="async">
+    </div><p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--ink-soft);text-align:center;margin-top:14px">Grandma&rsquo;s hug &middot; A first summer, held close</p>
+  </div>
+</section>
+<!-- EVERYONE ON THE DAY -->
+<section>
+  <div class="wrap" style="text-align:center">
+    <div class="eyebrow">On The Day</div>
+    <h2 class="big" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-style:normal">Nervous, wiggly or not into it. Everyone is welcome.</h2>
+    <p style="max-width:640px;margin:0 auto;color:var(--ink-soft)">Every family shows up with someone who would rather be anywhere else. The secret is talking to each person about what worries them, and telling them how I will help.</p>
+    <div class="incl incl-ph">
+      <div class="it"><img src="images/family/FlaglerBeach-FamilySession-21.webp" alt="A sister hugging her little brother on the beach, both grinning" style="object-position:center 25%" loading="lazy" decoding="async"><b>The kids</b><span>I promise them the silly photos, in between or at the end. The Spiderman pose, the gymnastics moves. Knowing their silly side gets its turn too makes them excited to give those smiles to grandma.</span></div>
+      <div class="it"><img src="images/family/PrincessPlace_FamilySession_OhlsonPhotography-8.webp" alt="Two grown children standing with their parents under the oaks at Princess Place" style="object-position:center 35%" loading="lazy" decoding="async"><b>The grownups</b><span>You don't have to worry about a thing. I guide you through every moment: stand here, try this. Nobody has to come up with anything, and nobody gets blamed for how a picture looks.</span></div>
+      <div class="it"><img src="images/family/PrincessPlace_FamilySession_OhlsonPhotography-17.webp" alt="Two teenage sisters hugging and smiling in front of the lodge door at Princess Place" style="object-position:center 12%" loading="lazy" decoding="async"><b>The teenagers</b><span>A quick one-on-one, just us. &ldquo;I understand this isn't your favorite thing right now, and I don't blame you. I promise it will be quick and easy.&rdquo; And a reminder that this really matters to mom and grandma.</span></div>
+      <div class="it"><img src="images/family/WashingtonOaks_FamilySession_OhlsonPhotography.webp" alt="A mother holding her little girl while her son leans in beside her in the garden" style="object-position:center 40%" loading="lazy" decoding="async"><b>The moms</b><span>I'm looking after the hair, telling you when something needs a change, and keeping your favorite side of your face in mind. Because we know that matters.</span></div>
+      <div class="it"><img src="images/family/FlaglerBeach_FamilySession_OhlsonPhotography-7.webp" alt="A big extended family walking hand in hand along Flagler Beach" style="object-position:center 60%" loading="lazy" decoding="async"><b>The whole crew</b><span>Grandparents, aunts, cousins and the newest baby. Big summer reunions are some of my favorite sessions of the year.</span></div>
+      <div class="it"><img src="images/family/WashingtonOaksGardens_FamilySession_OhlsonPhotography-2.webp" alt="Three generations of a family dressed up together in the gardens at Washington Oaks" style="object-position:center 78%" loading="lazy" decoding="async"><b>Bilingual</b><span>English and Espa&ntilde;ol, so every generation of your family feels welcome and included.</span></div>
+    </div>
+  </div>
+</section>
+<!-- SUMMER -->
+<section style="padding:48px 0;background:var(--sage-tint)">
+  <div class="wrap center" style="max-width:720px;margin:0 auto 26px">
+    <div class="eyebrow">Florida Summers</div>
+    <h2 class="big" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-style:normal">Very early or very late, while the beach is fresh.</h2>
+    <p style="color:var(--ink-soft);margin-top:10px">Summer is hot here, and it is also when the kids are off and families come together, visiting the grandparents who live here or spending the season on the coast. It's just a different vibe. So I meet families very early in the morning or late in the evening, when the air is fresher and the light is soft.</p>
+  </div>
+  <div class="wrap" style="max-width:1040px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <img src="images/family/FlaglerBeach-FamilySession-70.webp" alt="A girl laughing as a wave crashes over her on the sand" loading="lazy" decoding="async" style="width:100%;aspect-ratio:3/2;object-fit:cover;object-position:center;border-radius:3px;display:block;box-shadow:0 14px 34px rgba(30,25,20,.14)">
+      <img src="images/family/FlaglerBeach-FamilySession-8.webp" alt="A brother and sister playing on a driftwood log by the Flagler Beach pier" loading="lazy" decoding="async" style="width:100%;aspect-ratio:3/2;object-fit:cover;object-position:center;border-radius:3px;display:block;box-shadow:0 14px 34px rgba(30,25,20,.14)">
+    </div>
+    <p style="color:var(--ink-soft);font-style:italic;font-size:14px;margin-top:12px;text-align:center">Summer kids at Flagler Beach, doing exactly what summer kids do.</p>
+  </div>
+</section>
+<!-- WHERE -->
+<section>
+  <div class="wrap" style="text-align:center">
+    <div class="eyebrow">Where We Meet</div>
+    <h2 class="big" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-style:normal">The beach, the oaks, or your own living room.</h2>
+    <p style="max-width:620px;margin:0 auto;color:var(--ink-soft)">Two of my favorite places on this coast, or right in your own home. Read my guide to the <a href="blog-best-places-for-family-photos-palm-coast-flagler-beach.html" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-soft)">best places for family photos in Palm Coast and Flagler Beach</a>.</p>
+    <div class="detail-strip" style="text-align:left">
+      <figure><img src="images/family/FlaglerBeach_FamilySession_OhlsonPhotography-6.webp" alt="Parents with their son and daughter standing together on Flagler Beach" style="object-position:center 30%" loading="lazy" decoding="async"><figcaption>The beach<span>Flagler Beach, Palm Coast and Ormond Beach, at sunrise or sunset.</span></figcaption></figure>
+      <figure><img src="images/family/WashingtonOaks_FamilySession_OhlsonPhotography-5.webp" alt="Parents sitting together on the lawn under the oaks at Washington Oaks while their little girl twirls in front of them" style="object-position:center 55%" loading="lazy" decoding="async"><figcaption>Washington Oaks<span>Live oaks, tall palms and wide lawns.</span></figcaption></figure>
+      <figure><img src="images/family/FamilySession_Home_OhlsonPhotography-32.webp" alt="Parents laughing with their baby and the family cat in their living room" style="object-position:center 40%" loading="lazy" decoding="async"><figcaption>At home<span>Your sofa, your nursery, your dog or cat included.</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+<!-- REVIEWS -->
+<section style="padding:56px 0;background:var(--cream2);text-align:center">
+  <div class="wrap" style="max-width:980px">
+    <div class="eyebrow">From My Families</div>
+    <div class="rev-trio">
+      <div>
+        <div style="color:var(--gold);letter-spacing:2px">★★★★★</div>
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(16px,1.6vw,18px);color:var(--ink);line-height:1.45;margin:10px 0 12px">&ldquo;For just an hour of photography she gave us tons of beautiful shots we have gotten raving reviews on. I will absolutely consider Paola our family photographer from here on.&rdquo;</p>
+        <div style="color:var(--sage-deep);letter-spacing:.18em;text-transform:uppercase;font-size:12px">Melissa</div>
+      </div>
+      <img class="rev-photo" src="images/family/FamilySession_PalmCoast_Photographer-12.webp" alt="A little girl in a gray romper smiling and holding two pink flowers on a garden path" loading="lazy" decoding="async">
+      <div>
+        <div style="color:var(--gold);letter-spacing:2px">★★★★★</div>
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(16px,1.6vw,18px);color:var(--ink);line-height:1.45;margin:10px 0 12px">&ldquo;Paola is the BEST with children and for family photos! Just love the energy she brings to the session and works her magic with the children to capture the most amazing photos.&rdquo;</p>
+        <div style="color:var(--sage-deep);letter-spacing:.18em;text-transform:uppercase;font-size:12px">Court A. &middot; Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- HOW WE WORK TOGETHER -->
+<section>
+  <div class="wrap" style="text-align:center">
+    <div class="eyebrow">How It Works</div>
+    <h2 class="big" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-style:normal">You bring the family. I'll take care of the rest.</h2>
+    <p style="max-width:690px;margin:0 auto;color:var(--ink-soft)">We chase the light and create the poses together, but what I'm really looking for is the moment in between, when the love just shows.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><b>Tell me about your family</b><p>Who is coming, who is visiting from out of town, and who might need a little extra encouragement. I want to know all of it.</p></div>
+      <div class="step"><div class="n">2</div><b>Pick a place and a time</b><p>The beach, the oaks or your home. In summer, very early morning or late evening for the freshest air and softest light.</p></div>
+      <div class="step"><div class="n">3</div><b>Just show up</b><p>I guide every pose and every moment, and the kids get their silly photos too. Nobody has to know what to do.</p></div>
+      <div class="step"><div class="n">4</div><b>Keep it forever</b><p>Your photos edited by hand, ready to share, print and hang on the wall where you'll see them every day.</p></div>
+    </div>
+    <div class="quote-flank">
+      <img src="images/family/PrincessPlace_FamilySession_OhlsonPhotography-4.webp" alt="A father with his arm around his smiling son on the lodge porch at Princess Place" loading="lazy" decoding="async">
+      <div class="qf-text">
+      <p class="quote-mark" style="margin:0">&ldquo;I'm really looking for that moment where the love just shows. It's in the way mom looks, and the way the kid looks at dad. Those moments make my job so amazing.&rdquo;</p>
+      <div class="who" style="color:var(--sage-deep);letter-spacing:.24em;text-transform:uppercase;font-size:12.5px;margin-top:14px;padding-left:16px">Paola Ohlson</div>
+      </div>
+      <img src="images/family/PrincessPlace_FamilySession_OhlsonPhotography-20.webp" alt="A mother hugged by her two daughters under the oaks at Princess Place" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+<!-- INVESTMENT -->
+<section style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap" style="text-align:center">
+    <div class="eyebrow">The Sessions</div>
+    <h2 class="big" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-style:normal">Your family, or the whole crew.</h2>
+    <div class="collections">
+      <div class="col-card">
+        <div class="col-name">Family</div>
+        <div class="col-hours">Parents &amp; Kids</div>
+        <div class="col-price"><small>Starting at</small><span class="tbd">$&nbsp;?</span></div>
+        <ul class="col-list">
+          <li><span class="tbd">What's included, from Paola</span></li>
+          <li>Guided session at the beach, a park or your home</li>
+          <li>Hand-edited images in a private gallery</li>
+          <li>Bilingual, English &amp; Espa&ntilde;ol</li>
+        </ul>
+        <a href="contact.html" class="btn btn-ghost">Check Your Date</a>
+      </div>
+      <div class="col-card">
+        <div class="col-name">Extended Family</div>
+        <div class="col-hours">Grandparents, Cousins &amp; All</div>
+        <div class="col-price"><small>Starting at</small><span class="tbd">$&nbsp;?</span></div>
+        <ul class="col-list">
+          <li><span class="tbd">What's included, from Paola</span></li>
+          <li>Every generation together, plus each family on its own</li>
+          <li>Hand-edited images in a private gallery</li>
+          <li>Bilingual, English &amp; Espa&ntilde;ol</li>
+        </ul>
+        <a href="contact.html" class="btn btn-solid">Check Your Date</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- YEARS LATER -->
+<section>
+  <div class="wrap split rev" style="align-items:stretch">
+    <div class="txt">
+      <div class="eyebrow">Year After Year</div>
+      <h2 class="big" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-style:normal">Some of my families I have photographed every year for six or seven years.</h2>
+      <p>Watching these kids grow, the graduations and everything that happens in between, has truly been a gift. And it brings so much joy when a family I photographed a year or two ago reaches out again.</p>
+      <p>Recently I photographed a newborn at home for friends I first met at their engagement session, and then photographed through both pregnancies.</p>
+      <p class="quote-mark">&ldquo;It really feels like I'm the cousin nobody gets to see often. But when we see each other, it just feels like family.&rdquo;</p>
+      <p>That is the story I tell on my <a href="portraits.html" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-soft)">Portraits</a> page: the Full Circle, from the first photo to the whole life that follows.</p>
+    </div>
+    <div style="position:relative;min-height:520px;border-radius:3px;overflow:hidden;box-shadow:0 18px 45px rgba(30,25,20,.14)"><img src="images/family/HomeFamilySession_OhlsonPhotography-3.webp" alt="Parents cuddling their little girl on the sofa during an at-home family session" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block" loading="lazy" decoding="async"></div>
+  </div>
+</section>
+<!-- FAQ -->
+<section style="padding:48px 0;background:var(--cream2)">
+  <div class="wrap" style="text-align:center">
+    <div class="eyebrow">Good To Know</div>
+    <h2 class="big" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-style:normal">Questions families ask.</h2>
+    <div class="faq">
+      <div class="q"><h4>What time of day is best in summer?</h4><p>Very early morning or late evening. Florida summers are hot, and those hours bring fresher air, softer light and happier kids.</p></div>
+      <div class="q"><h4>My kids won't sit still. Is that a problem?</h4><p>Not at all. I tell them that once we finish a few photos, we will do the silly ones: the Spiderman pose, the cartwheel, whatever they want to show me. Knowing their turn is coming makes them much more willing to smile for grandma.</p></div>
+      <div class="q"><h4>My teenager really doesn't want to do this.</h4><p>That's normal, and I don't blame them. I take a minute with them on their own, promise it will be quick and easy, and remind them how much it means to mom and grandma. It softens things up, every time.</p></div>
+      <div class="q"><h4>We don't know how to pose.</h4><p>You don't have to. I guide you through every moment, so you can relax and just be together.</p></div>
+      <div class="q"><h4>What should we wear?</h4><p>I wrote a whole guide for that: <a href="blog-what-to-wear-for-family-portraits.html" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-soft)">what to wear for family portraits</a>.</p></div>
+      <div class="q"><h4>Can we do our session at home?</h4><p>Yes. Some of my favorite family and newborn sessions happen at home, on the sofa, in the nursery, with the dog and the cat included.</p></div>
+    </div>
+  </div>
+</section>
+<!-- HUNT FOR LIGHT -->
+<section style="background:var(--paper)">
+  <div class="wrap light-band">
+    <img src="images/family/FamilySession_OhlsonPhotography-6.webp" alt="A grandfather bending down to kiss his granddaughter on the head as she hugs him on the beach at sunset" style="object-position:center 55%" loading="lazy" decoding="async">
+    <div>
+      <div class="eyebrow">Chasing The Light</div>
+      <h2 class="big" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-style:normal">We chase the light. The love is what I'm after.</h2>
+      <p class="quote-mark">&ldquo;I love doing families. I love to be part of people's moments.&rdquo;</p>
+      <p style="color:var(--ink-soft)">Every family is different. The light we chase is the same.</p>
+    </div>
+  </div>
+</section>
+<!-- FINAL CTA -->
+<section style="padding:48px 0;background:var(--sage-tint);text-align:center">
+  <div class="wrap" style="max-width:720px">
+    <img class="close-photo" src="images/family/PrincessPlace_FamilySession_OhlsonPhotography-19.webp" alt="A family of four and their dog together under the oaks at Princess Place" style="object-position:center 45%" loading="lazy" decoding="async">
+    <div class="eyebrow">Let's Begin</div>
+    <h2 class="big" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-style:normal">Bring everyone together.</h2>
+    <p style="color:var(--ink-soft);max-width:520px;margin:0 auto 26px">Tell me who is coming, when they're in town and where you'd love to be photographed. I'll take it from there.</p>
+    <a href="contact.html" class="btn btn-solid">Check Your Date</a>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <img src="images/img-1bb6cec512.webp" alt="Ohlson Photography" style="height:62px;width:auto;margin:0 auto 14px;display:block" loading="lazy" decoding="async">
+    <div class="foot-nav">
+      <div class="foot-eyebrow">Explore More</div>
+      <div class="foot-links">
+        <a href="st-augustine-wedding-photographer.html">St. Augustine</a>
+        <a href="destination-weddings.html">Destinations</a>
+        <a href="intimate-backyard-weddings.html">Intimate &amp; Backyard</a>
+        <a href="great-gatsby-wedding.html">Great Gatsby</a>
+        <a href="brown-museum-wedding.html">The Brown Museum</a>
+        <a href="themed-weddings.html">Themed Weddings</a>
+      </div>
+      <div class="foot-rule"></div>
+      <div class="foot-links">
+        <a href="vow-renewal-photographer.html">Vow Renewals</a>
+        <a href="wall-art-prints.html">Wall Art</a>
+        <a href="professional-headshots-palm-coast.html">Headshots</a>
+        <a href="everyone-welcome.html">Everyone Welcome</a>
+        <a href="bilingual-wedding-photographer.html">Bilingual</a>
+        <a href="bodas.html">Espa&ntilde;ol</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+    Documentary Wedding Photographer · St. Augustine · Palm Coast · Flagler Beach · Ponte Vedra · Beyond<br>
+    <a href="mailto:info@ohlsonphotography.com">info@ohlsonphotography.com</a> · 386.302.2186 · Se habla español
+    <div style="margin-top:16px;display:flex;gap:20px;justify-content:center;align-items:center">
+      <a href="https://www.instagram.com/ohlsonphoto" target="_blank" rel="noopener" aria-label="Instagram"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.86.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.86.07s-3.6 0-4.86-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.86c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.4 2.2 8.8 2.2 12 2.2Zm0 1.98c-3.15 0-3.52.01-4.76.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.9.19 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.39-.32-1.71a2.85 2.85 0 0 0-.69-1.06 2.85 2.85 0 0 0-1.06-.69c-.32-.13-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07Zm0 3.37A5.05 5.05 0 1 1 6.95 12 5.05 5.05 0 0 1 12 6.95Zm0 8.33A3.28 3.28 0 1 0 8.72 12 3.28 3.28 0 0 0 12 15.28Zm5.26-8.55a1.18 1.18 0 1 1-1.18-1.18 1.18 1.18 0 0 1 1.18 1.18Z"/></svg></a>
+      <a href="https://www.facebook.com/ohlsonphoto" target="_blank" rel="noopener" aria-label="Facebook"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg></a>
+      <a href="https://www.pinterest.com/ohlsonphoto" target="_blank" rel="noopener" aria-label="Pinterest"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.9 2 4 5.28 4 9.02c0 1.73.99 3.88 2.57 4.56.24.1.37.06.43-.17.04-.17.26-1.02.36-1.42.03-.13.02-.24-.09-.37-.55-.66-.79-1.44-.79-2.33 0-3.02 2.26-5.94 6.11-5.94 3.33 0 5.66 2.27 5.66 5.52 0 3.66-1.85 6.2-4.25 6.2-1.33 0-2.32-1.1-2-2.44.38-1.61 1.11-3.35 1.11-4.51 0-1.04-.56-1.9-1.71-1.9-1.36 0-2.45 1.4-2.45 3.28 0 1.19.4 2 .4 2s-1.36 5.78-1.6 6.8c-.28 1.19-.04 2.65-.02 2.8.01.09.13.11.18.04.08-.1 1.09-1.35 1.43-2.6.1-.35.55-2.15.55-2.15.27.52 1.07.98 1.92.98 2.52 0 4.35-2.32 4.35-5.98C20.04 4.7 16.5 2 12.04 2Z"/></svg></a>
+    </div>
+    <div class="foot-rule"></div>
+    <div class="foot-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+    <div class="foot-credit"><a href="https://ownersbehindit.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:7px"><img src="images/ob-mark.png" alt="" width="20" height="20" loading="lazy" style="display:block;width:20px;height:20px">Designed by Owners Behind It</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  function run(){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{threshold:0.12, rootMargin:'0px 0px -6% 0px'});
+    // section-level reveals (skip the gallery section; its images reveal individually)
+    document.querySelectorAll('section').forEach(function(s){
+      if(s.querySelector('.gallery')) return;
+      s.classList.add('reveal'); io.observe(s);
+    });
+    // hero text
+    var hi=document.querySelector('.hero-inner'); if(hi){hi.classList.add('reveal'); io.observe(hi);}
+    // gallery images, staggered
+    document.querySelectorAll('.gallery img').forEach(function(img,i){
+      img.classList.add('reveal');
+      img.style.transitionDelay=(i*90)+'ms';
+      io.observe(img);
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
+})();
+</script>
+</body>
+</html>
