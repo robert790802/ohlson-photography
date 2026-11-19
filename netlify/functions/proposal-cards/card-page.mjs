@@ -21,7 +21,7 @@ export function renderCard(card, who, id, origin = "https://ohlsonphotography.co
   const name = who === "him" ? card.him : card.her;
   const note = who === "him" ? card.noteHim : card.noteHer;
   const photo = `/c/${id}/photo`;
-  const url = `${origin}/c/${id}/${who}`;
+  const url = `${origin}/c/${id}/${who}`; // canonical-ish address for previews
   const yes = who === "her" ? `<div class="yes">You said yes <span>&#9825;</span></div>` : "";
   const noteBlock = note && note.trim()
     ? `<div class="ournote"><div class="eyebrow">A note just for you</div><p>${esc(note)}</p></div>`
@@ -69,9 +69,6 @@ export function renderCard(card, who, id, origin = "https://ohlsonphotography.co
     ${noteBlock}
     ${gallery}
     <p class="pull">The beginning has a way of becoming everything.</p>
-    <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;Everything was so relaxed and natural, exactly how I would have wanted.&rdquo;</p><cite>Leonardo N. &middot; Proposal and wedding</cite></div>
-    <div class="pair"><figure><img src="/images/img-679032d3fe.webp" alt="Leo and Veronica's proposal at the fountain"><figcaption>The proposal</figcaption></figure><figure><img src="/images/img-14f702d952.webp" alt="Leo and Veronica on their wedding day"><figcaption>The wedding</figcaption></figure></div>
-    <p class="momentnote">I was there when Leo asked, at the fountain in St. Augustine. I was there again for their engagement session, and for the day it was all leading to.</p>
     <div class="deeper"><span class="lead">When you start dreaming</span><a href="/weddings.html">See a whole wedding &rarr;</a></div>
     <a class="btn ghost save" href="/paola-ohlson.vcf" download>Save my contact</a>
     <div class="reach"><a href="tel:+13863022186">Call</a><a href="sms:+13863022186">Text</a><a href="mailto:paola@ohlsonphotography.com">Email</a></div>

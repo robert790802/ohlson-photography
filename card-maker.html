@@ -83,7 +83,7 @@ h1 em{font-style:italic;color:var(--sage-deep)}
 .env .seal{width:54px;height:54px;border-radius:50%;margin:0 auto;background:var(--sage-deep);color:var(--paper);display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 0 0 4px #F8EDE6}
 .env .to{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:30px;color:var(--ink);margin-top:20px}
 .env .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--ink-soft);margin-top:6px}
-.env .btn{margin-top:24px}
+.env .btn{margin-top:24px;background:var(--sage-deep);border-color:var(--sage-deep);color:var(--paper);border-radius:40px;box-shadow:0 4px 14px rgba(154,106,92,.25)}.env .btn:active{background:#87594c}
 body.locked{overflow:hidden}
 body{padding-top:10px}
 .maker{max-width:430px;margin:0 auto 18px;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:20px 18px 22px}
@@ -156,9 +156,6 @@ body{padding-top:10px}
     <div class="ournote" id="cnotebox"><div class="eyebrow">A note just for you</div><p id="cnote"></p></div>
     <a class="btn solid gal" id="cgal" href="#" target="_blank" rel="noopener">Open your sneak peeks</a>
     <p class="pull">The beginning has a way of becoming everything.</p>
-    <div class="quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;Everything was so relaxed and natural, exactly how I would have wanted.&rdquo;</p><cite>Leonardo N. &middot; Proposal and wedding</cite></div>
-    <div class="pair"><figure><img src="/images/img-679032d3fe.webp" alt=""><figcaption>The proposal</figcaption></figure><figure><img src="/images/img-14f702d952.webp" alt=""><figcaption>The wedding</figcaption></figure></div>
-    <p class="momentnote">I was there when Leo asked, at the fountain in St. Augustine. I was there again for their engagement session, and for the day it was all leading to.</p>
     <div class="deeper"><span class="lead">When you start dreaming</span><a href="/weddings.html" target="_blank" rel="noopener">See a whole wedding &rarr;</a></div>
     <div class="reach" style="margin-top:22px"><a href="#">Call</a><a href="#">Text</a><a href="#">Email</a></div>
     <img class="logo" style="width:120px;margin:26px auto 4px" src="/images/img-1bb6cec512.webp" alt="Ohlson Photography">
@@ -214,8 +211,8 @@ $('make').onclick=function(){
     if(!res.ok){status(res.j.error||'Something went wrong. Please try again.',true);return}
     try{localStorage.setItem('ohlsonCardPass',$('pass').value)}catch(e){}
     var base=location.origin, lh=base+res.j.her, lm=base+res.j.him;
-    $('sher').href=smsHref($('pher').value,'Congratulations, '+her+'! \u{1F942} I have a little surprise for you: '+lh+' Love, Paola');
-    $('shim').href=smsHref($('phim').value,'Congratulations, '+him+'! \u{1F942} I have a little surprise for you: '+lm+' Love, Paola');
+    $('sher').href=smsHref($('pher').value,'Congratulations, '+her+'! \u{1F942} I have a little surprise for you. Love, Paola\n'+lh);
+    $('shim').href=smsHref($('phim').value,'Congratulations, '+him+'! \u{1F942} I have a little surprise for you. Love, Paola\n'+lm);
     $('links').innerHTML='Her card: <a href="'+lh+'" target="_blank" rel="noopener">'+lh+'</a><br>His card: <a href="'+lm+'" target="_blank" rel="noopener">'+lm+'</a>';
     status(''); $('ready').classList.add('on'); $('make').style.display='none';
   }).catch(function(){btn.disabled=false;status('No connection. Please try again in a moment.',true)});
