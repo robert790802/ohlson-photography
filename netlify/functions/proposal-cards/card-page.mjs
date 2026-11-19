@@ -21,7 +21,7 @@ export function renderCard(card, who, id, origin = "https://ohlsonphotography.co
   const name = who === "him" ? card.him : card.her;
   const note = who === "him" ? card.noteHim : card.noteHer;
   const photo = `/c/${id}/photo`;
-  const url = `${origin}/c/${id}/${who}`;
+  const url = `${origin}/c/${id}/${who}`; // canonical-ish address for previews
   const yes = who === "her" ? `<div class="yes">You said yes <span>&#9825;</span></div>` : "";
   const noteBlock = note && note.trim()
     ? `<div class="ournote"><div class="eyebrow">A note just for you</div><p>${esc(note)}</p></div>`

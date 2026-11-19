@@ -2,8 +2,9 @@
 // card and photos, and serves a private "her" and "his" card page.
 //
 //   POST /api/proposal-cards   create a card (needs Paola's passcode)
-//   GET  /c/:id/her            her card
-//   GET  /c/:id/him            his card
+//   GET  /c/veronica-k7p2q     her card (her name + the card's short code)
+//   GET  /c/leo-k7p2q          his card
+//   GET  /c/:id/her, /c/:id/him  older two-part links, still work
 //   GET  /c/:id/photo          top photo (also the text-message preview image)
 //   GET  /c/:id/photo2         second photo, if she added one
 //
@@ -11,7 +12,7 @@
 import { getStore } from "@netlify/blobs";
 import { renderCard, notFoundPage } from "./card-page.mjs";
 
-export const config = { path: ["/api/proposal-cards", "/c/:id/:part"] };
+export const config = { path: ["/api/proposal-cards", "/c/:id/:part", "/c/:slug"] };
 
 const MAX_PHOTO = 4 * 1024 * 1024; // bytes, after the phone shrinks it
 
@@ -45,9 +46,22 @@ function decodePhoto(dataUrl) {
   return { type: m[1], bytes };
 }
 
-function newId() {
-  return crypto.randomUUID().replace(/-/g, "").slice(0, 16);
+const CODE_CHARS = "abcdefghjkmnpqrstuvwxyz23456789"; // no 0/o, 1/l/i
+
+function newCode() {
+  const bytes = crypto.getRandomValues(new Uint8Array(5));
+  return Array.from(bytes, (b) => CODE_CHARS[b % CODE_CHARS.length]).join("");
 }
+
+export function slugify(name) {
+  const s = String(name || "")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+    .slice(0, 24).replace(/-+$/g, "");
+  return s || "card";
+}
+
+const VALID_ID = /^(?:[a-f0-9]{16}|[a-z2-9]{5})$/;
 
 async function create(req, context) {
   // Deploy previews already sit behind the Netlify team login, so the passcode
@@ -74,8 +88,9 @@ async function create(req, context) {
   if (!photo) return json({ error: "Please choose a photo from tonight." }, 400);
   const photo2 = body.photo2 ? decodePhoto(body.photo2) : null;
 
-  const id = newId();
   const store = cards();
+  let id = newCode();
+  for (let i = 0; i < 5 && (await store.get(`card-${id}`)); i++) id = newCode();
   await store.set(`photo-${id}`, photo.bytes, { metadata: { type: photo.type } });
   if (photo2) await store.set(`photo2-${id}`, photo2.bytes, { metadata: { type: photo2.type } });
   await store.setJSON(`card-${id}`, {
@@ -85,11 +100,13 @@ async function create(req, context) {
     photo2: Boolean(photo2),
     created: new Date().toISOString(),
   });
-  return json({ id, her: `/c/${id}/her`, him: `/c/${id}/him` }, 201);
+  let herSlug = slugify(her), himSlug = slugify(him);
+  if (herSlug === himSlug) { herSlug += "-her"; himSlug += "-him"; }
+  return json({ id, her: `/c/${herSlug}-${id}`, him: `/c/${himSlug}-${id}` }, 201);
 }
 
 async function serve(id, part, origin) {
-  if (!/^[a-f0-9]{16}$/.test(id)) return page(notFoundPage(), 404);
+  if (!VALID_ID.test(id)) return page(notFoundPage(), 404);
   const store = cards();
 
   if (part === "photo" || part === "photo2") {
@@ -110,6 +127,18 @@ async function serve(id, part, origin) {
   return page(renderCard(card, part, id, origin));
 }
 
+// "/c/veronica-k7p2q": the code is the last 5 characters; the name says whose card.
+async function serveSlug(slug, origin) {
+  const m = /^(?:([a-z0-9-]+)-)?([a-z2-9]{5})$/.exec(slug);
+  if (!m) return page(notFoundPage(), 404);
+  const name = m[1] || "", id = m[2];
+  const card = await cards().get(`card-${id}`, { type: "json" });
+  if (!card) return page(notFoundPage(), 404);
+  const him = slugify(card.him), her = slugify(card.her);
+  const who = name === him || name === `${him}-him` ? "him" : "her";
+  return page(renderCard(card, who, id, origin));
+}
+
 export default async (req, context) => {
   const url = new URL(req.url);
   try {
@@ -117,8 +146,9 @@ export default async (req, context) => {
       if (req.method !== "POST") return json({ error: "Use the card maker form." }, 405);
       return await create(req, context);
     }
-    const { id, part } = context.params || {};
     if (req.method !== "GET" && req.method !== "HEAD") return new Response("Not allowed", { status: 405 });
+    const { id, part, slug } = context.params || {};
+    if (slug !== undefined && part === undefined) return await serveSlug(String(slug).toLowerCase(), url.origin);
     return await serve(String(id || ""), String(part || ""), url.origin);
   } catch (err) {
     console.log("proposal-cards error:", err && err.stack ? err.stack : err);

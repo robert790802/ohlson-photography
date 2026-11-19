@@ -214,8 +214,8 @@ $('make').onclick=function(){
     if(!res.ok){status(res.j.error||'Something went wrong. Please try again.',true);return}
     try{localStorage.setItem('ohlsonCardPass',$('pass').value)}catch(e){}
     var base=location.origin, lh=base+res.j.her, lm=base+res.j.him;
-    $('sher').href=smsHref($('pher').value,'Congratulations, '+her+'! \u{1F942} I have a little surprise for you: '+lh+' Love, Paola');
-    $('shim').href=smsHref($('phim').value,'Congratulations, '+him+'! \u{1F942} I have a little surprise for you: '+lm+' Love, Paola');
+    $('sher').href=smsHref($('pher').value,'Congratulations, '+her+'! \u{1F942} I have a little surprise for you. Love, Paola\n'+lh);
+    $('shim').href=smsHref($('phim').value,'Congratulations, '+him+'! \u{1F942} I have a little surprise for you. Love, Paola\n'+lm);
     $('links').innerHTML='Her card: <a href="'+lh+'" target="_blank" rel="noopener">'+lh+'</a><br>His card: <a href="'+lm+'" target="_blank" rel="noopener">'+lm+'</a>';
     status(''); $('ready').classList.add('on'); $('make').style.display='none';
   }).catch(function(){btn.disabled=false;status('No connection. Please try again in a moment.',true)});
