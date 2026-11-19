@@ -203,7 +203,7 @@ $('make').onclick=function(){
   var her=$('her').value.trim(), him=$('him').value.trim();
   if(!her||!him){status('Please add both names.',true);return}
   if(!photo1){status('Please choose the photo for the top.',true);return}
-  if(!$('pass').value.trim()){status('Please add your passcode.',true);return}
+  if(!$('pass').value.trim()&&location.hostname.indexOf('deploy-preview')!==0){status('Please add your passcode.',true);return}
   var btn=this; btn.disabled=true; status('Making your cards...');
   fetch('/api/proposal-cards',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({
     passcode:$('pass').value, her:her, him:him, gallery:$('link').value.trim(),

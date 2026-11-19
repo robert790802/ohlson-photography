@@ -49,14 +49,17 @@ function newId() {
   return crypto.randomUUID().replace(/-/g, "").slice(0, 16);
 }
 
-async function create(req) {
+async function create(req, context) {
+  // Deploy previews already sit behind the Netlify team login, so the passcode
+  // is only enforced on the real site.
+  const isPreview = context?.deploy?.context === "deploy-preview";
   const passcode = (globalThis.Netlify?.env?.get("CARD_PASSCODE") ?? process.env.CARD_PASSCODE ?? "").trim();
-  if (!passcode) return json({ error: "The card maker is not set up yet (no passcode)." }, 503);
+  if (!passcode && !isPreview) return json({ error: "The card maker is not set up yet (no passcode)." }, 503);
 
   let body;
   try { body = await req.json(); } catch { return json({ error: "Something went wrong reading the form." }, 400); }
 
-  if (String(body.passcode ?? "").trim() !== passcode) return json({ error: "That passcode is not right." }, 401);
+  if (!isPreview && String(body.passcode ?? "").trim() !== passcode) return json({ error: "That passcode is not right." }, 401);
 
   const her = clean(body.her, 40).trim();
   const him = clean(body.him, 40).trim();
@@ -112,7 +115,7 @@ export default async (req, context) => {
   try {
     if (url.pathname === "/api/proposal-cards") {
       if (req.method !== "POST") return json({ error: "Use the card maker form." }, 405);
-      return await create(req);
+      return await create(req, context);
     }
     const { id, part } = context.params || {};
     if (req.method !== "GET" && req.method !== "HEAD") return new Response("Not allowed", { status: 405 });
