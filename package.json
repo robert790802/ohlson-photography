@@ -1,0 +1,8 @@
+{
+  "name": "ohlson-photography",
+  "private": true,
+  "description": "Static site. This file only exists so the proposal card function can use Netlify Blobs storage.",
+  "dependencies": {
+    "@netlify/blobs": "^11.1.9"
+  }
+}
