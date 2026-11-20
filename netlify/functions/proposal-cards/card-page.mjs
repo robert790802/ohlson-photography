@@ -69,7 +69,7 @@ export function renderCard(card, who, id, origin = "https://ohlsonphotography.co
     ${noteBlock}
     ${gallery}
     <p class="pull">The beginning has a way of becoming everything.</p>
-    <div class="deeper"><span class="lead">When you start dreaming</span><a href="/weddings.html">See a whole wedding &rarr;</a></div>
+    <div class="deeper"><span class="lead">When you start dreaming</span><a href="https://ohlsonphotography.pic-time.com/XKw9bYSyBT0MU" target="_blank" rel="noopener">See a whole wedding &rarr;</a></div>
     <a class="btn ghost save" href="/paola-ohlson.vcf" download>Save my contact</a>
     <div class="reach"><a href="tel:+13863022186">Call</a><a href="sms:+13863022186">Text</a><a href="mailto:paola@ohlsonphotography.com">Email</a></div>
     <img class="logo" style="width:120px;margin:26px auto 4px" src="/images/img-1bb6cec512.webp" alt="Ohlson Photography">
