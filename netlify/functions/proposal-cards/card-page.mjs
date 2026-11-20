@@ -27,7 +27,7 @@ export function renderCard(card, who, id, origin = "https://ohlsonphotography.co
     ? `<div class="ournote"><div class="eyebrow">A note just for you</div><p>${esc(note)}</p></div>`
     : "";
   const gallery = card.gallery
-    ? `<a class="btn solid gal" href="${esc(card.gallery)}" target="_blank" rel="noopener">Open your sneak peeks</a>`
+    ? `<a class="btn solid gal" href="${esc(card.gallery)}" target="_blank" rel="noopener">Open your sneak peeks &#9825;</a>`
     : "";
   return `<!DOCTYPE html>
 <html lang="en"><head>
@@ -51,7 +51,7 @@ export function renderCard(card, who, id, origin = "https://ohlsonphotography.co
 <div class="reveal" id="reveal">
   <div class="env">
     <img class="logo" src="/images/img-1bb6cec512.webp" alt="Ohlson Photography">
-    <div class="seal">&#9825;</div>
+    <div class="seal">&#9829;</div>
     <div class="to">${esc(name)},</div>
     <div class="sub">a little surprise, just for you</div>
     <button class="btn solid" id="open" type="button">Open</button>
