@@ -64,7 +64,7 @@ export function renderCard(card, who, id, origin = "https://ohlsonphotography.co
     <img class="avatar" src="/images/img-4f9b81d3f8.webp" alt="Paola Ohlson, photographer in Palm Coast, Florida">
     <h1>${h.html}</h1>
     ${yes}
-    <p class="note"><b>Thank you for letting me be there for your yes. I have been hiding behind dunes and doorways since 2008, and that second never gets old.</b><b>Tonight is just for the two of you. Hold hands, call the people you love, and soak it in.</b><span class="sign">Paola</span></p>
+    <p class="note"><b>Thank you for letting me be there for your yes. I have been hiding behind dunes and doorways since 2008, and that second never gets old.</b><b>This moment is just for the two of you. Hold hands, call the people you love, and soak it in.</b><span class="sign">Paola</span></p>
     ${card.photo2 ? `<div class="detail"><img src="/c/${id}/photo2" alt="Your proposal"></div>` : ""}
     ${noteBlock}
     ${gallery}
